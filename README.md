@@ -1,5 +1,13 @@
 # Final Project: Bird-Classifier #
 
+## Video ##
+
+https://youtu.be/tHbJB4TkGpQ
+
+## Code ##
+
+[birdkaggle.ipynb](./birdkaggle.ipynb)
+
 ## Problem description ##
 My project is to find a fine-tuned Kaggle Bird Classifier model. I am trying to use a classification model to train a variety of bird pictures so that the bird classifier can eventually identify what species the bird belongs to based on the picture provided by the user. I expect my classifier to end up with more than 80% accuracy.
 
