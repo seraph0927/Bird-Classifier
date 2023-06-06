@@ -23,7 +23,7 @@ The training set and the test set are all from the Kaggle. The dataset contains 
 ## Results ##
 To develop the bird species classifier, I conducted several training sessions, each of which required extensive computational resources and time.  The total computational time exceeded 30 hours, utilizing the full extent of my available GPU quota.
 
-My project code is here: Githut project and Kaggle project.
+My project code is here: [Githut project](./birdkaggle.ipynb) and [Kaggle project](https://www.kaggle.com/code/gangouyang/birdkaggle).
 
 ### Initial Training with ResNet18: ###
 The project began with an initial training session using the ResNet18 model. The hyperparameters were set casually at this stage, which resulted in a modest training accuracy of around 60%.  This was an initial benchmark from which I aimed to improve.
@@ -32,7 +32,9 @@ The project began with an initial training session using the ResNet18 model. The
 Recognizing the potential for improved performance, I transitioned to the deeper ResNet50 model for subsequent training sessions.  These sessions involved ongoing adjustments to key hyperparameters, specifically the learning rate and the number of training epochs per stage.  With each iterative adjustment and round of training, I observed continuous improvements in the model's performance, reflected in the steadily increasing training accuracy.
 
 ### Final Training Accuracy and Model Performance: ###
-After extensive model training and hyperparameter optimization, the final training accuracy reached approximately 94%.  This was a significant improvement over the initial training session, suggesting the effectiveness of the adjustments made during the iterative training process.  However, when applied to the unseen test set, the model's accuracy was lower, around 74%.  This suggests that the model may have overfit to the training data to some extent.
+After extensive model training and hyperparameter optimization, the final training accuracy reached approximately 98%.  This was a significant improvement over the initial training session, suggesting the effectiveness of the adjustments made during the iterative training process.  However, when applied to the unseen test set, the model's accuracy was lower, around 74%.  This suggests that the model may have overfit to the training data to some extent.
+
+<img src="./loss.png" alt="loss" width="500">
 
 The curve of the loss function over training epochs, as seen in the provided figure, provides further insight into the model's learning process.  The specific characteristics of the curve can help identify potential issues like overfitting or underfitting, learning rate misconfiguration, or other problems that might impact model performance.
 
@@ -41,7 +43,7 @@ Overall, while the final model performance on the test set did not reach the tar
 ## Discussion ##
 ### What problems did you encounter? ###
 
-The primary issue I faced during the project was model overfitting.  This was indicated by the discrepancy in performance between the training and test sets – achieving a high accuracy of around 93% on the training set but only about 74% on the unseen test set.  Unfortunately, due to the constraints of my GPU usage allowance, I was unable to continue refining the model to address this issue within the project timeframe.
+The primary issue I faced during the project was model overfitting.  This was indicated by the discrepancy in performance between the training and test sets – achieving a high accuracy of around 98% on the training set but only about 74% on the unseen test set.  Unfortunately, due to the constraints of my GPU usage allowance, I was unable to continue refining the model to address this issue within the project timeframe.
 
 One way I plan to address this overfitting issue is by increasing the regularization parameter, decay.  Regularization methods can help constrain the complexity of the model and reduce overfitting.  Furthermore, expanding my data augmentation techniques can also be beneficial as it creates a more varied dataset, forcing the model to learn more general features rather than memorizing the training data.
 
